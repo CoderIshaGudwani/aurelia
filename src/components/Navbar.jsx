@@ -1,19 +1,38 @@
-function Navbar() {
-    return (
-      <nav className="navbar navbar-expand-lg bg-dark navbar-dark">
-        <div className="container">
-          <a className="navbar-brand fw-bold" href="#">
-            🦋 Aurelia
-          </a>
-  
-          <div className="ms-auto">
-            <button className="btn btn-outline-light">
-              Login
-            </button>
-          </div>
-        </div>
-      </nav>
-    );
-  }
-  
-  export default Navbar;
+import { Navbar, Nav, Container, Button } from "react-bootstrap";
+
+export default function CustomNavbar() {
+  return (
+    <Navbar
+      expand="lg"
+      className="glass mt-3 mx-3 py-3"
+      variant="dark"
+    >
+      <Container>
+        <Navbar.Brand className="fw-bold fs-3">
+        🦋 Aurelia • Focus Beautifully
+        </Navbar.Brand>
+
+        <Navbar.Toggle aria-controls="navbar" />
+
+        <Navbar.Collapse id="navbar">
+          <Nav className="ms-auto align-items-center gap-3">
+
+            <Nav.Link href="#">Features</Nav.Link>
+
+            <Nav.Link href="#">Journey</Nav.Link>
+
+            <Nav.Link href="#">About</Nav.Link>
+
+            <Button
+              variant="light"
+              className="rounded-pill px-4 fw-semibold"
+            >
+              Get Started
+            </Button>
+
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
+  );
+}
