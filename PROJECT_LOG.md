@@ -32,3 +32,11 @@
 - Installed React-Bootstrap
 - Built premium glassmorphism navbar
 - Improved landing page styling
+
+## SPRINT 4
+
+- Added React Router.
+- Created Login, Register and Dashboard pages.
+- Implemented routing with BrowserRouter.
+- Built the first version of the Login page with a glassmorphism design.
+- Connected Login and Register pages using React Router Link.

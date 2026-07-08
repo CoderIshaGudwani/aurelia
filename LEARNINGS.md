@@ -42,3 +42,19 @@
 - Third-party libraries must be installed before importing them.
 - Error messages often tell you exactly what is missing.
 - React-Bootstrap provides Bootstrap components as React components.
+
+## Git
+
+### New Learning
+
+- Created my first Git repository.
+- Made my first Git commit.
+- Learned how `git add`, `git commit`, and `git log --oneline` work.
+
+## React Router
+
+- BrowserRouter wraps the entire application.
+- Routes define different pages.
+- Route maps a URL to a component.
+- Link changes pages without reloading the browser.
+- React components use PascalCase (Link, BrowserRouter, Routes).
