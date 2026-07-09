@@ -1,14 +1,20 @@
+import Sidebar from "../components/Sidebar";
+import Topbar from "../components/Topbar";
+import DashboardHome from "../components/DashboardHome";
+
 export default function Dashboard() {
   return (
-    <div className="container text-center py-5">
+    <div className="d-flex">
 
-      <h1 className="display-3 fw-bold">
-        Dashboard
-      </h1>
+      <Sidebar />
 
-      <p className="lead">
-        Your productivity garden will grow here 🌱
-      </p>
+      <div className="flex-grow-1">
+
+        <Topbar />
+
+        <DashboardHome />
+
+      </div>
 
     </div>
   );
