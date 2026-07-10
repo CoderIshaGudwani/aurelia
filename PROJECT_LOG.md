@@ -40,3 +40,19 @@
 - Implemented routing with BrowserRouter.
 - Built the first version of the Login page with a glassmorphism design.
 - Connected Login and Register pages using React Router Link.
+
+## SPRINT 5 - Dashboard Foundation
+
+### Features Added
+- Created Dashboard page layout
+- Added Sidebar navigation
+- Added Topbar with welcome message
+- Added Dashboard cards:
+  - Focus Timer
+  - Today's Tasks
+  - Evolution Progress
+- Hid Navbar on Dashboard
+- Improved dashboard structure for future Task CRUD and Pomodoro integration
+
+### Progress
+Aurelia now has separate public pages (Landing, Login, Register) and an application dashboard ready for upcoming features.

@@ -1,80 +1,79 @@
+import { useState } from "react";
+
 export default function DashboardHome() {
-    return (
-        <div className="container-fluid p-4">
+  const [task, setTask] = useState("");
+  const [tasks, setTasks] = useState([]);
 
-            <div className="row g-4">
+  const addTask = () => {
+    if (task.trim() === "") return;
 
-                <div className="col-lg-4">
+    const newTask = {
+      id: Date.now(),
+      text: task,
+      completed: false,
+    };
 
-                    <div className="card shadow border-0 h-100">
+    setTasks([...tasks, newTask]);
+    setTask("");
+  };
 
-                        <div className="card-body">
+  return (
+    <div className="container-fluid p-4">
 
-                            <h5>🍅 Focus Timer</h5>
+      <div className="card shadow border-0 mb-4">
+        <div className="card-body">
 
-                            <h1 className="display-5">
-                                25:00
-                            </h1>
+          <h4 className="mb-3">🌱 Today's Tasks</h4>
 
-                            <button className="btn btn-success w-100">
-                                Start Focus Session
-                            </button>
+          <div className="d-flex gap-2">
 
-                        </div>
+            <input
+              type="text"
+              className="form-control"
+              placeholder="Enter a task..."
+              value={task}
+              onChange={(e) => setTask(e.target.value)}
+            />
 
-                    </div>
+            <button
+              className="btn btn-success"
+              onClick={addTask}
+            >
+              Add
+            </button>
 
-                </div>
-
-                <div className="col-lg-4">
-
-                    <div className="card shadow border-0 h-100">
-
-                        <div className="card-body">
-
-                            <h5>✅ Today's Tasks</h5>
-
-                            <h2>0</h2>
-
-                            <p className="text-muted fst-italic">
-                                🌱 Every completed task helps your butterfly grow.
-                            </p>
-
-                        </div>
-
-                    </div>
-
-                </div>
-
-                <div className="col-lg-4">
-
-                    <div className="card shadow border-0 h-100">
-
-                        <div className="card-body">
-
-                            <h5>🦋 Evolution Progress</h5>
-
-                            <div className="progress mb-3">
-
-                                <div
-                                    className="progress-bar bg-success"
-                                    style={{ width: "25%" }}
-                                ></div>
-
-                            </div>
-                            🐛 25 XP / 100 XP
-
-                            <small className="text-muted d-block mt-2">
-                                One more productive day at a time.
-                            </small>
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
+          </div>
 
         </div>
-    );
+      </div>
+
+      <div className="card shadow border-0">
+        <div className="card-body">
+
+          <h5>Task List</h5>
+
+          {tasks.length === 0 ? (
+            <p className="text-muted">
+              No tasks yet 🌿
+            </p>
+          ) : (
+            <ul className="list-group">
+
+              {tasks.map((t) => (
+                <li
+                  key={t.id}
+                  className="list-group-item"
+                >
+                  {t.text}
+                </li>
+              ))}
+
+            </ul>
+          )}
+
+        </div>
+      </div>
+
+    </div>
+  );
 }

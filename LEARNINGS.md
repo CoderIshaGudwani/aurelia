@@ -58,3 +58,28 @@
 - Route maps a URL to a component.
 - Link changes pages without reloading the browser.
 - React components use PascalCase (Link, BrowserRouter, Routes).
+
+# Day 8 Learning
+
+## React
+- Learned how to split a page into reusable components.
+- Used React Router to navigate between pages.
+- Imported and combined multiple components into one page.
+
+## Bootstrap
+- Used Flexbox (`d-flex`) to create a Sidebar + Content layout.
+- Used `flex-grow-1` to let the main content fill the remaining space.
+- Used Bootstrap Grid (`row`, `col`) to create responsive dashboard cards.
+- Used Bootstrap Cards and Progress Bar components.
+
+## UI/UX
+- Learned that dashboards should present important information at a glance.
+- Understood the difference between a Landing Page and an Application Dashboard.
+- Started designing UI around the Aurelia theme instead of generic CRUD layouts.
+
+## Project Architecture
+- Kept components modular:
+  - Sidebar
+  - Topbar
+  - DashboardHome
+- Prepared the dashboard for future Task CRUD and Pomodoro features.
