@@ -78,8 +78,12 @@ export default function DashboardHome() {
                             placeholder="Enter a task..."
                             value={task}
                             onChange={(e) => setTask(e.target.value)}
+                            onKeyDown={(e) => {
+                                if (e.key === "Enter") {
+                                    addTask();
+                                }
+                            }}
                         />
-
                         <button
                             className="btn btn-success"
                             onClick={addTask}
