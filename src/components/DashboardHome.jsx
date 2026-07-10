@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import Pomodoro from "./Pomodoro";
 
 export default function DashboardHome() {
 
@@ -57,6 +58,9 @@ export default function DashboardHome() {
 
     return (
         <div className="container-fluid p-4">
+            <Pomodoro />
+
+            <br />
 
             {/* Add Task */}
 
