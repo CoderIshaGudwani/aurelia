@@ -50,3 +50,25 @@ Reusable components reduce code duplication, improve consistency, and make appli
 Q: Why do we use a key prop inside map()?
 
 A: React uses the key to identify which list items have changed, been added, or removed. This helps React update the DOM efficiently.
+
+## Day 9
+
+### React Interview
+
+Q. Why use useEffect?
+A. To perform side effects like API calls, timers, or syncing with Local Storage.
+
+Q. Difference between map() and filter()?
+A.
+- map() transforms every item.
+- filter() removes items based on a condition.
+
+Q. Why use Local Storage?
+A. To persist data after page refresh without a backend.
+
+Q. What is CRUD?
+A.
+Create
+Read
+Update
+Delete

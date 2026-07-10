@@ -56,3 +56,12 @@
 
 ### Progress
 Aurelia now has separate public pages (Landing, Login, Register) and an application dashboard ready for upcoming features.
+
+## Day 9
+
+### Features Completed
+- Built complete Task CRUD.
+- Added Local Storage persistence.
+- Added Edit Task functionality.
+- Added XP Progress system.
+- Created functional Pomodoro timer component.
