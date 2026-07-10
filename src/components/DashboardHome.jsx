@@ -54,7 +54,8 @@ export default function DashboardHome() {
     };
 
     const completedTasks = tasks.filter((t) => t.completed).length;
-
+    const xp = completedTasks * 10;
+    const level = xp >= 100 ? "🦋 Butterfly" : "🐛 Caterpillar";
 
     return (
         <div className="container-fluid p-4">
@@ -101,6 +102,29 @@ export default function DashboardHome() {
                     <span>Completed : {completedTasks}</span>
 
                     <span>Remaining : {tasks.length - completedTasks}</span>
+
+                </div>
+            </div>
+
+            <div className="card shadow border-0 mb-4">
+                <div className="card-body">
+
+                    <h4>🦋 Evolution Progress</h4>
+
+                    <div className="progress my-3">
+
+                        <div
+                            className="progress-bar bg-success"
+                            style={{
+                                width: `${Math.min(xp, 100)}%`,
+                            }}
+                        ></div>
+
+                    </div>
+
+                    <h5>{xp} XP / 100 XP</h5>
+
+                    <p>{level}</p>
 
                 </div>
             </div>
