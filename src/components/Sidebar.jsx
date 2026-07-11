@@ -1,41 +1,39 @@
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
+import "./Sidebar.css";
 
 export default function Sidebar() {
   return (
-    <div
-      className="bg-dark text-white p-3"
-      style={{
-        width: "250px",
-        minHeight: "100vh",
-      }}
-    >
-    <h3 className="mb-4 text-center">
-    🦋 Aurelia
-    </h3>
+    <div className="sidebar">
+      <h2 className="logo">
+        🦋 Aurelia
+      </h2>
 
-    <hr className="border-secondary" />
+      <hr />
 
-      <ul className="nav flex-column">
+      <nav>
 
-        <li className="nav-item">
-          <Link className="nav-link text-white" to="/dashboard">
-            Dashboard
-          </Link>
-        </li>
+        <NavLink
+          to="/dashboard"
+          className={({ isActive }) =>
+            isActive ? "active" : ""
+          }
+        >
+          🏠 Dashboard
+        </NavLink>
 
-        <li className="nav-item">
-          <Link className="nav-link text-white" to="#">
-            Tasks
-          </Link>
-        </li>
+        <NavLink
+          to="#"
+        >
+          ✅ Tasks
+        </NavLink>
 
-        <li className="nav-item">
-          <Link className="nav-link text-white" to="#">
-            Pomodoro
-          </Link>
-        </li>
+        <NavLink
+          to="#"
+        >
+          🍅 Pomodoro
+        </NavLink>
 
-      </ul>
+      </nav>
     </div>
   );
 }

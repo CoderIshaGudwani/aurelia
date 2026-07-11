@@ -51,7 +51,22 @@
 }
 
 body {
-  margin: 0;
+
+    margin: 0;
+    min-height: 100vh;
+  
+    font-family: "Poppins", sans-serif;
+  
+    background: linear-gradient(
+      135deg,
+      #162447 0%,
+      #1f4068 35%,
+      #36558f 70%,
+      #4b6cb7 100%
+    );
+  
+    background-attachment: fixed;
+  
 }
 
 #root {
@@ -108,4 +123,23 @@ code {
   line-height: 135%;
   padding: 4px 8px;
   background: var(--code-bg);
+}
+
+.card {
+  border: none !important;
+  border-radius: 22px !important;
+
+  background: rgba(255, 255, 255, 0.12) !important;
+
+  backdrop-filter: blur(14px);
+
+  box-shadow: 0 10px 35px rgba(0, 0, 0, 0.25);
+
+  transition: .3s;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+
+  box-shadow: 0 18px 45px rgba(0, 0, 0, .35);
 }
