@@ -15,6 +15,7 @@ export default function DashboardHome() {
     const [search, setSearch] = useState("");
     const [filter, setFilter] = useState("all");
     const [priority, setPriority] = useState("Medium");
+    const [sortOrder, setSortOrder] = useState("newest");
 
     useEffect(() => {
         localStorage.setItem("tasks", JSON.stringify(tasks));
@@ -57,7 +58,7 @@ export default function DashboardHome() {
 
     const clearAllTasks = () => {
         setTasks([]);
-      };
+    };
 
     const saveTask = (id) => {
         setTasks(
@@ -152,6 +153,14 @@ export default function DashboardHome() {
                 >
                     Completed
                 </button>
+                <select
+                    className="form-select mb-4"
+                    value={sortOrder}
+                    onChange={(e) => setSortOrder(e.target.value)}
+                >
+                    <option value="newest">Newest First</option>
+                    <option value="oldest">Oldest First</option>
+                </select>
             </div>
 
             <div className="card shadow border-0 mb-4">
@@ -189,6 +198,7 @@ export default function DashboardHome() {
                 tasks={tasks}
                 search={search}
                 filter={filter}
+                sortOrder={sortOrder}
                 editingId={editingId}
                 editText={editText}
                 setEditText={setEditText}
