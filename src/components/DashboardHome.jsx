@@ -14,6 +14,7 @@ export default function DashboardHome() {
     const [editText, setEditText] = useState("");
     const [search, setSearch] = useState("");
     const [filter, setFilter] = useState("all");
+    const [priority, setPriority] = useState("Medium");
 
     useEffect(() => {
         localStorage.setItem("tasks", JSON.stringify(tasks));
@@ -28,12 +29,14 @@ export default function DashboardHome() {
                 id: Date.now(),
                 text: task,
                 dueDate,
+                priority,
                 completed: false,
             },
         ]);
 
         setTask("");
         setDueDate("");
+        setPriority("Medium");
     };
 
     const toggleTask = (id) => {
@@ -95,6 +98,15 @@ export default function DashboardHome() {
                                 onChange={(e) => setDueDate(e.target.value)}
                             />
                         </div>
+                        <select
+                            className="form-select"
+                            value={priority}
+                            onChange={(e) => setPriority(e.target.value)}
+                        >
+                            <option>High</option>
+                            <option>Medium</option>
+                            <option>Low</option>
+                        </select>
 
                         <div className="col-md-3">
                             <button
