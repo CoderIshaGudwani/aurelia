@@ -12,6 +12,7 @@ export default function TaskList({
     deleteTask,
     saveTask,
     deleteCompleted,
+    clearAllTasks
 }) {
     const filteredTasks = tasks
         .filter((t) =>
@@ -29,13 +30,21 @@ export default function TaskList({
 
                 <div className="d-flex justify-content-between align-items-center mb-3">
                     <h5>Task List</h5>
+                    <div className="d-flex gap-2">
+                        <button
+                            className="btn btn-outline-danger btn-sm"
+                            onClick={deleteCompleted}
+                        >
+                            🗑 Completed
+                        </button>
 
-                    <button
-                        className="btn btn-outline-danger btn-sm"
-                        onClick={deleteCompleted}
-                    >
-                        🗑 Delete Completed
-                    </button>
+                        <button
+                            className="btn btn-outline-dark btn-sm"
+                            onClick={clearAllTasks}
+                        >
+                            ❌ Clear All
+                        </button>
+                    </div>
                 </div>
 
                 {filteredTasks.length === 0 ? (
@@ -84,10 +93,10 @@ export default function TaskList({
                                 </div>
                                 <small
                                     className={`d-block fw-bold ${t.priority === "High"
-                                            ? "text-danger"
-                                            : t.priority === "Medium"
-                                                ? "text-warning"
-                                                : "text-success"
+                                        ? "text-danger"
+                                        : t.priority === "Medium"
+                                            ? "text-warning"
+                                            : "text-success"
                                         }`}
                                 >
                                     🚩 {t.priority}

@@ -55,6 +55,10 @@ export default function DashboardHome() {
         setTasks(tasks.filter((t) => !t.completed));
     };
 
+    const clearAllTasks = () => {
+        setTasks([]);
+      };
+
     const saveTask = (id) => {
         setTasks(
             tasks.map((t) =>
@@ -193,6 +197,7 @@ export default function DashboardHome() {
                 deleteTask={deleteTask}
                 saveTask={saveTask}
                 deleteCompleted={deleteCompleted}
+                clearAllTasks={clearAllTasks}
             />
         </div>
     );
