@@ -48,6 +48,10 @@ export default function DashboardHome() {
         setTasks(tasks.filter((t) => t.id !== id));
     };
 
+    const deleteCompleted = () => {
+        setTasks(tasks.filter((t) => !t.completed));
+    };
+
     const saveTask = (id) => {
         setTasks(
             tasks.map((t) =>
@@ -168,6 +172,7 @@ export default function DashboardHome() {
             <TaskList
                 tasks={tasks}
                 search={search}
+                filter={filter}
                 editingId={editingId}
                 editText={editText}
                 setEditText={setEditText}
@@ -175,6 +180,7 @@ export default function DashboardHome() {
                 toggleTask={toggleTask}
                 deleteTask={deleteTask}
                 saveTask={saveTask}
+                deleteCompleted={deleteCompleted}
             />
         </div>
     );
