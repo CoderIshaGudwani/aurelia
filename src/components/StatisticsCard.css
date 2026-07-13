@@ -1,0 +1,78 @@
+.stats-card {
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(16px);
+
+  border-radius: 22px;
+
+  color: white;
+
+  box-shadow: 0 15px 35px rgba(0, 0, 0, .25);
+}
+
+.stats-title {
+  text-align: center;
+
+  margin-bottom: 30px;
+
+  font-weight: 700;
+
+  letter-spacing: 1px;
+}
+
+.stats-box {
+  text-align: center;
+
+  padding: 22px;
+
+  border-radius: 18px;
+
+  background: rgba(255,255,255,.08);
+
+  transition: .3s;
+}
+
+.stats-box:hover {
+  transform: translateY(-8px);
+
+  background: rgba(255,255,255,.15);
+}
+
+.stats-box h2 {
+  font-size: 42px;
+
+  margin-bottom: 10px;
+}
+
+.stats-box h5 {
+  font-size: 30px;
+
+  font-weight: bold;
+}
+
+.stats-box p {
+  color: #d8e3ff;
+
+  margin-top: 10px;
+}
+
+.progress {
+  height: 18px;
+
+  border-radius: 30px;
+
+  background: rgba(255,255,255,.15);
+
+  overflow: hidden;
+}
+
+.progress-bar {
+  background: linear-gradient(
+    90deg,
+    #5b7cfa,
+    #7b61ff
+  );
+
+  font-weight: bold;
+
+  transition: .5s;
+}
