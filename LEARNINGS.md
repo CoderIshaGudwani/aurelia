@@ -83,3 +83,11 @@
   - Topbar
   - DashboardHome
 - Prepared the dashboard for future Task CRUD and Pomodoro features.
+
+## Day 10
+
+- Split a large React component into smaller reusable components.
+- Implemented task search, filtering, sorting and priority.
+- Used localStorage to persist task data.
+- Improved dashboard UI with custom CSS instead of relying only on Bootstrap.
+- Learned the difference between Link and NavLink.

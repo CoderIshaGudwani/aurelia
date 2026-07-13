@@ -72,3 +72,7 @@ Create
 Read
 Update
 Delete
+
+Q.What is the difference between Link and NavLink in React Router?
+Q.Why do we split React components instead of keeping everything in one file?
+Q.Why do we keep task-related properties (priority, dueDate, completed) inside one object instead of separate arrays?

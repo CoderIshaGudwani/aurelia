@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import Pomodoro from "./Pomodoro";
 import TaskList from "./TaskList";
+import StatisticsCard from "./StatisticsCard";
 
 export default function DashboardHome() {
     const [task, setTask] = useState("");
@@ -16,6 +17,7 @@ export default function DashboardHome() {
     const [filter, setFilter] = useState("all");
     const [priority, setPriority] = useState("Medium");
     const [sortOrder, setSortOrder] = useState("newest");
+
 
     useEffect(() => {
         localStorage.setItem("tasks", JSON.stringify(tasks));
@@ -193,6 +195,12 @@ export default function DashboardHome() {
                     <h2>{streak} Day</h2>
                 </div>
             </div>
+            <StatisticsCard
+                totalTasks={tasks.length}
+                completedTasks={completedTasks}
+                xp={xp}
+                streak={streak}
+            />
 
             <TaskList
                 tasks={tasks}

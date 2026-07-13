@@ -65,3 +65,14 @@ Aurelia now has separate public pages (Landing, Login, Register) and an applicat
 - Added Edit Task functionality.
 - Added XP Progress system.
 - Created functional Pomodoro timer component.
+
+## Day 10
+
+- Added task search.
+- Added task filters (All, Active, Completed).
+- Added task sorting.
+- Added task priority.
+- Added delete completed tasks.
+- Added clear all tasks.
+- Redesigned sidebar with custom styling.
+- Improved dashboard visual appearance.
