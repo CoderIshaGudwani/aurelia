@@ -86,8 +86,38 @@
 
 ## Day 10
 
-- Split a large React component into smaller reusable components.
-- Implemented task search, filtering, sorting and priority.
-- Used localStorage to persist task data.
-- Improved dashboard UI with custom CSS instead of relying only on Bootstrap.
-- Learned the difference between Link and NavLink.
+### React
+- Component splitting
+- Props
+- State management
+- Conditional rendering
+- Reusable components
+
+### JavaScript
+- filter()
+- map()
+- sort()
+- includes()
+- spread operator (...)
+
+### UI
+- Glassmorphism
+- Hover animations
+- Flexbox
+- Bootstrap Grid
+- CSS transitions
+
+### Architecture
+- Keeping large components modular
+- Passing data between parent and child components
+
+
+# 🎓 What I Learned Today
+
+- ✅ How `package.json` scripts work.
+- ✅ What `npm run dev` actually does.
+- ✅ Difference between CommonJS and ES Modules.
+- ✅ Why `"type": "module"` matters.
+- ✅ Why ES Modules require `.js` in local imports.
+- ✅ How to read and understand Node.js error messages.
+- ✅ Why backend development often starts with debugging the project setup before writing business logic.

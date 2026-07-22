@@ -66,13 +66,32 @@ Aurelia now has separate public pages (Landing, Login, Register) and an applicat
 - Added XP Progress system.
 - Created functional Pomodoro timer component.
 
+
 ## Day 10
 
-- Added task search.
-- Added task filters (All, Active, Completed).
-- Added task sorting.
-- Added task priority.
-- Added delete completed tasks.
-- Added clear all tasks.
-- Redesigned sidebar with custom styling.
-- Improved dashboard visual appearance.
+- Added task search functionality.
+- Added task filtering (All, Active, Completed).
+- Added task sorting (Newest / Oldest).
+- Added task priority (High, Medium, Low).
+- Added due date support.
+- Added delete completed tasks feature.
+- Added clear all tasks feature.
+- Created reusable TaskList component.
+- Created reusable StatisticsCard component.
+- Added productivity statistics dashboard.
+- Improved sidebar styling.
+- Added glassmorphism cards and better UI.
+
+# 🎓 What I Learned Today
+
+- ✅ How `package.json` scripts work.
+- ✅ What `npm run dev` actually does.
+- ✅ Difference between CommonJS and ES Modules.
+- ✅ Why `"type": "module"` matters.
+- ✅ Why ES Modules require `.js` in local imports.
+- ✅ How to read and understand Node.js error messages.
+- ✅ Why backend development often starts with debugging the project setup before writing business logic.
+
+---
+
+Today wasn't about building new features—it was about setting up a solid backend foundation. I learned how Node.js starts an application, how ES Modules work, how npm scripts are executed, and how to debug common backend setup issues. These are core skills that will help me in every future Node.js and MERN project.
