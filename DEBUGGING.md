@@ -292,3 +292,15 @@ Imported file path existed but file was missing/not named correctly.
 
 FIX:
 Created controllers/authController.js and matched ES Module import path.
+
+
+Issue:
+Received "Cannot GET /api/tasks/:id"
+
+Cause:
+A GET request was sent to a route that only supports PUT and DELETE.
+
+Resolution:
+Use GET /api/tasks for fetching all tasks.
+Use PUT /api/tasks/:id to update.
+Use DELETE /api/tasks/:id to delete.

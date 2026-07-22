@@ -95,3 +95,60 @@ Aurelia now has separate public pages (Landing, Login, Register) and an applicat
 ---
 
 Today wasn't about building new features—it was about setting up a solid backend foundation. I learned how Node.js starts an application, how ES Modules work, how npm scripts are executed, and how to debug common backend setup issues. These are core skills that will help me in every future Node.js and MERN project.
+
+## Milestone 3 - Task CRUD Backend
+
+✅ Added JWT Authentication Middleware
+
+Status:
+- Verifies JWT
+- Protects private routes
+- Stores decoded user in req.user
+
+## Milestone 3 - Task CRUD Backend
+
+✅ Created taskRoutes.js
+
+Added protected CRUD routes:
+
+- GET /api/tasks
+- POST /api/tasks
+- PUT /api/tasks/:id
+- DELETE /api/tasks/:id
+
+All routes now use JWT middleware.
+
+## Milestone 3 - Task CRUD Backend
+
+✅ Implemented Task Controller
+
+Completed:
+- Get Tasks
+- Create Task
+- Update Task
+- Delete Task
+
+Each operation is restricted to the logged-in user.
+
+
+## Milestone 3 - Task CRUD Backend
+
+🔄 Backend API testing started.
+
+Endpoints under test:
+- Register
+- Login
+- Create Task
+- Get Tasks
+- Update Task
+- Delete Task
+
+## Milestone 3 Completed ✅
+
+Backend completed:
+
+- JWT Middleware
+- Protected Task Routes
+- Task CRUD Controllers
+- MongoDB Integration
+- CRUD API Tested

@@ -76,3 +76,62 @@ Delete
 Q.What is the difference between Link and NavLink in React Router?
 Q.Why do we split React components instead of keeping everything in one file?
 Q.Why do we keep task-related properties (priority, dueDate, completed) inside one object instead of separate arrays?
+
+Q. "How do you protect private routes in a MERN application?"
+
+Answer:
+
+"I use JWT based authentication. After login, the server generates a token. The client sends that token with requests. Middleware verifies the token before allowing access to protected APIs."
+
+### Q. What is middleware in Express?
+
+Middleware is a function that runs before the route handler. It can authenticate users, validate data, log requests, or modify the request and response.
+
+---
+
+### Q. Why do we use JWT middleware?
+
+JWT middleware verifies the user's token before allowing access to protected routes. If the token is valid, user information is attached to req.user.
+
+### Why use Express Router?
+
+Express Router helps organize endpoints into separate files, making applications easier to maintain and scale.
+
+---
+
+### Why use router.use(authMiddleware)?
+
+Instead of adding middleware to every route individually, router.use() protects every route below it automatically.
+
+### Why separate routes and controllers?
+
+Routes define the API endpoints, while controllers contain the application logic. This separation keeps the code modular and easier to maintain.
+
+---
+
+### Why use findOneAndUpdate instead of updateOne?
+
+findOneAndUpdate() returns the updated document (with { new: true }) and allows checking whether a matching document exists.
+
+### Why test APIs before integrating React?
+
+It isolates backend issues from frontend issues. If the API works independently, debugging the frontend becomes much easier.
+
+---
+
+### What is CRUD?
+
+Create, Read, Update, Delete — the four basic operations performed on database records.
+
+### Explain the MVC pattern in Express.
+
+- Model: Represents the database schema.
+- View: The frontend (React).
+- Controller: Contains the application logic.
+- Routes connect incoming requests to the appropriate controller.
+
+---
+
+### Why protect CRUD routes with JWT?
+
+Without JWT authentication, any user could access or modify another user's data. JWT ensures only authenticated users can access their own resources.

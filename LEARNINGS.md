@@ -121,3 +121,35 @@
 - ✅ Why ES Modules require `.js` in local imports.
 - ✅ How to read and understand Node.js error messages.
 - ✅ Why backend development often starts with debugging the project setup before writing business logic.
+
+
+# Express Router
+
+- Express Router groups related endpoints.
+- Middleware can protect an entire router using router.use().
+- Routes are separated from controller logic for cleaner code.
+
+
+
+# Task Controller
+
+- Controllers contain business logic.
+- Mongoose methods like find(), create(), findOneAndUpdate(), and findOneAndDelete() interact with MongoDB.
+- Filtering by user ensures each user only accesses their own tasks.
+
+# Testing APIs
+
+- Always test backend endpoints before connecting the frontend.
+- JWT token must be included in the Authorization header for protected routes.
+- CRUD operations should be verified independently to simplify debugging.
+
+# Backend CRUD
+
+A standard Express backend is organized into:
+
+- Routes → define endpoints
+- Middleware → authenticate requests
+- Controllers → business logic
+- Models → database schema
+
+Keeping these layers separate makes the code scalable and maintainable.
